@@ -1,0 +1,70 @@
+generated: '2026-08-04'
+method: searched
+source: https://www.getcovered.io/security, https://www.getcovered.io/ai-disclosure, https://www.getcovered.io/licenses
+summary: >-
+  Get Covered publishes a compliance posture on its own site — SOC 2 and PCI DSS Level 1
+  badges in the site footer, and GDPR / CCPA / SOC 2 named as compliance frameworks on
+  the AI Disclosure page — plus US state insurance licensure in 42 states under NAIC
+  #18224. No certificate, audit report, subprocessor list or trust-center portal is
+  published, so these are company claims rather than verified artifacts. No
+  machine-readable contract is public, so no API-level standard (OAuth 2.0, OIDC,
+  RFC 9457, JSON:API, pagination or idempotency conventions) could be derived or
+  asserted either way.
+standards:
+- id: soc2
+  name: SOC 2
+  conforms: true
+  basis: vendor-claim
+  evidence: '"SOC 2" compliance badge in the site footer on every page of getcovered.io; "Compliance Frameworks: GDPR, CCPA, SOC 2" on /ai-disclosure'
+- id: pci-dss
+  name: PCI DSS Level 1
+  conforms: true
+  basis: vendor-claim
+  evidence: '"PCI DSS L1" compliance badge in the site footer on every page of getcovered.io'
+- id: gdpr
+  name: GDPR
+  conforms: true
+  basis: vendor-claim
+  evidence: '"Compliance Frameworks: GDPR, CCPA, SOC 2" on https://www.getcovered.io/ai-disclosure'
+- id: ccpa
+  name: CCPA / CPRA
+  conforms: true
+  basis: vendor-claim
+  evidence: 'AI Disclosure page names CCPA; the Privacy Notice carries a California Residents section'
+- id: us-state-insurance-licensure
+  name: US state insurance producer licensure
+  conforms: true
+  basis: vendor-claim
+  evidence: 'Licensed in 42 states (AL AZ CA CO CT DC FL GA HI IA ID IL IN KS KY LA MA MD ME MI MN MO MS NC ND NE NH NJ NM NV NY OH OK OR PA SC TN TX UT VA WA WI); NAIC #18224; license detail at https://www.getcoveredinsurance.com/licenses'
+- id: iso-27001
+  conforms: false
+  evidence: not claimed anywhere on the public site
+- id: hipaa
+  conforms: false
+  evidence: not claimed; out of scope for a property-insurance platform
+- id: fedramp
+  conforms: false
+  evidence: not claimed
+- id: oauth2
+  conforms: unknown
+  evidence: 'no public machine-readable contract or auth documentation; the API reference at api.getcoveredinsurance.com/api-docs is gated behind HTTP Basic'
+- id: rfc9457-problem-details
+  conforms: unknown
+  evidence: no public OpenAPI or error reference to inspect
+- id: openapi
+  conforms: false
+  evidence: 'probed /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json, /api-docs/*, /graphql on every host — all 404 or 401 on 2026-08-04'
+certifications:
+- SOC 2
+- PCI DSS Level 1
+regulatory:
+  industry: insurance
+  regimes: [state-insurance-regulation, gdpr, ccpa]
+  naic_number: '18224'
+  licensed_states: 42
+x-evidence:
+  fetched: '2026-08-04'
+  urls:
+  - {url: 'https://www.getcovered.io/security', http_status: 200}
+  - {url: 'https://www.getcovered.io/ai-disclosure', http_status: 200}
+  - {url: 'https://www.getcovered.io/licenses', http_status: 200}

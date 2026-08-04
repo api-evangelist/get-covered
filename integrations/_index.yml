@@ -1,0 +1,78 @@
+generated: '2026-08-04'
+method: searched
+source: https://www.getcovered.io/about (demo form PMS list), https://www.getcovered.io/ (platform section)
+summary: >-
+  Get Covered advertises a two-way, lease-level integration surface with the major
+  multifamily property management systems. Because Get Covered publishes no
+  machine-readable contract, every entry below is LISTING-ONLY — no Arazzo workflow is
+  authored, since neither side of the pair has a verifiable operationId to bind to. These
+  are recorded as pending-partner-spec so a later round can author real 2-source Arazzo
+  if either contract becomes public.
+integrations:
+- slug: yardi
+  label: Yardi Voyager
+  partner: Yardi
+  category: property-management-system
+  use_case: >-
+    Real-time policy and charge sync at the lease level via Yardi's Standard API;
+    renters-insurance compliance status written back to the system of record.
+  arazzo: null
+  status: pending-partner-spec
+  evidence: Named in the Get Covered demo form PMS list and in Get Covered platform copy.
+- slug: entrata
+  label: Entrata
+  partner: Entrata
+  category: property-management-system
+  use_case: Resident, lease and policy sync; insurance compliance write-back.
+  arazzo: null
+  status: pending-partner-spec
+  evidence: Named in the Get Covered demo form PMS list.
+- slug: realpage-onesite
+  label: RealPage OneSite
+  partner: RealPage
+  category: property-management-system
+  use_case: Resident and policy sync for renters-insurance compliance.
+  arazzo: null
+  status: pending-partner-spec
+  evidence: Named in Get Covered integration copy ("Yardi Voyager, Onesite and Entrata").
+- slug: appfolio
+  label: AppFolio
+  partner: AppFolio
+  category: property-management-system
+  use_case: Resident, lease and policy sync.
+  arazzo: null
+  status: pending-partner-spec
+  evidence: Named in the Get Covered demo form PMS list.
+- slug: mri
+  label: MRI Software
+  partner: MRI Software
+  category: property-management-system
+  use_case: Resident, lease and policy sync.
+  arazzo: null
+  status: pending-partner-spec
+  evidence: Named in the Get Covered demo form PMS list.
+- slug: resman
+  label: ResMan
+  partner: ResMan
+  category: property-management-system
+  use_case: Resident, lease and policy sync.
+  arazzo: null
+  status: pending-partner-spec
+  evidence: Named in the Get Covered demo form PMS list.
+- slug: stripe
+  label: Stripe
+  partner: Stripe
+  category: payments
+  use_case: Payment processing for resident policy purchases.
+  arazzo: null
+  status: pending-partner-spec
+  evidence: '"We use Stripe to process your payments" — https://www.getcovered.io/privacy'
+coverage:
+  listed: 7
+  with_arazzo: 0
+  pending_partner_spec: 7
+x-evidence:
+  fetched: '2026-08-04'
+  urls:
+  - {url: 'https://www.getcovered.io/about', http_status: 200}
+  - {url: 'https://www.getcovered.io/privacy', http_status: 200}

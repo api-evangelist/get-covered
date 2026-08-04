@@ -1,0 +1,41 @@
+generated: '2026-08-04'
+method: probed
+source: https://api.getcoveredinsurance.com/api-docs
+documented: false
+summary: >-
+  Get Covered publishes no public authentication documentation and no machine-readable
+  contract from which security schemes could be derived. The one observable auth signal
+  is the gate on the API reference itself: api.getcoveredinsurance.com/api-docs returns
+  HTTP 401 with `WWW-Authenticate: Basic realm=""`, i.e. the API documentation is behind
+  HTTP Basic authentication and is available only to partners Get Covered provisions
+  directly. That is the gate on the DOCS, not a statement about how the API authenticates
+  callers — the API's own auth model is not public.
+  No `Authentication` pointer is wired into apis.yml, because the
+  `authentication_documented` check should not be credited to a provider whose auth
+  surface is entirely private.
+schemes: []
+observations:
+- surface: API reference
+  url: https://api.getcoveredinsurance.com/api-docs
+  http_status: 401
+  www_authenticate: 'Basic realm=""'
+  content_type: text/plain
+  content_length: 0
+  server_signature: 'Rails-style headers observed (x-request-id, x-runtime, vary: Origin)'
+- surface: OAuth / OIDC discovery
+  probed:
+  - {url: 'https://api.getcoveredinsurance.com/.well-known/openid-configuration', http_status: 404}
+  - {url: 'https://api.getcoveredinsurance.com/.well-known/oauth-authorization-server', http_status: 404}
+  - {url: 'https://www.getcovered.io/.well-known/openid-configuration', http_status: 404}
+  result: no OAuth 2.0 or OpenID Connect discovery metadata published
+- surface: resident portal
+  url: https://renters.getcoveredinsurance.com/auth/login
+  http_status: 200
+  note: End-user (resident) login for the renters-insurance portal; email/password sign-in, not a developer auth surface.
+gaps:
+- No public authentication guide, key-issuance flow, or token model.
+- No OAuth 2.0 / OIDC metadata; scopes/ artifact is not applicable.
+- API reference is Basic-auth gated, so security schemes cannot be harvested anonymously.
+x-evidence:
+  fetched: '2026-08-04'
+  tool: curl -D (header inspection)

@@ -1,0 +1,53 @@
+generated: '2026-08-04'
+method: searched
+source: https://www.getcovered.io/ (footer), https://getcovered.statuspage.io/, https://www.getcovered.io/terms
+summary: >-
+  Get Covered publishes no API versioning policy, no deprecation or sunset policy, no
+  SLA document and no publicly viewable status page. An Atlassian Statuspage tenant
+  exists at getcovered.statuspage.io and is titled "Get Covered Status", but it returns
+  "Page Inactive — this page is currently inactive and can only be viewed by team
+  members", so it is NOT a public status surface and no `StatusPage` pointer is emitted.
+  The only availability signal the company publishes is a static footer line, "All
+  systems operational · 99.98% uptime · 12 mo", which is marketing copy on the site
+  rather than a live status feed.
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  note: 'No public versioning policy. The API host answers on unversioned and /v1 paths (both 404 anonymously); no version contract is documented.'
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: No deprecation or sunset policy published; RFC 8594 support could not be observed anonymously.
+sla:
+  url: null
+  uptime_target: null
+  published_claim: '99.98% uptime over 12 months (static footer claim on www.getcovered.io)'
+status_page:
+  url: https://getcovered.statuspage.io/
+  public: false
+  http_status: 200
+  observed: 'Get Covered Status — Page Inactive. "This page is currently inactive and can only be viewed by team members."'
+  note: >-
+    Tenant exists but is not published. No StatusPage pointer is wired in apis.yml,
+    because a status page the public cannot read does not satisfy status_page_present.
+  probes:
+  - {url: 'https://status.getcovered.io/', result: DNS NXDOMAIN}
+  - {url: 'https://status.getcoveredinsurance.com/', result: DNS NXDOMAIN}
+  - {url: 'https://www.getcovered.io/status', http_status: 404}
+changelog:
+  url: null
+  note: >-
+    No dated product or API changelog is published. https://www.getcovered.io/blog is a
+    marketing "News" section, and the footer newsletter ("The Risk Stack Memo") promises
+    "AI agent release notes" by email, but no public release-notes page exists.
+legal_dates:
+  terms_last_modified: '2021-11-01'
+  source: https://www.getcovered.io/terms
+deprecated_operations: []
+x-evidence:
+  fetched: '2026-08-04'
+  urls:
+  - {url: 'https://getcovered.statuspage.io/', http_status: 200, note: page inactive}
+  - {url: 'https://www.getcovered.io/status', http_status: 404}
+  - {url: 'https://www.getcovered.io/terms', http_status: 200}

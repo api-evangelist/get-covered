@@ -1,0 +1,64 @@
+generated: '2026-08-04'
+method: probed
+source: live HTTP probe of every Get Covered host
+summary: >-
+  No /.well-known discovery documents are published on any Get Covered host. The
+  marketing site (www.getcovered.io) and the insurance site (getcoveredinsurance.com)
+  return 404 for every probed path. The resident portal
+  (renters.getcoveredinsurance.com) is a Next.js single-page app whose catch-all route
+  answers HTTP 200 with the SPA HTML shell for EVERY /.well-known/* path — that is a
+  false positive, not a document, and is recorded as such. The API host
+  (api.getcoveredinsurance.com) 404s every /.well-known path.
+hosts:
+- host: https://www.getcovered.io
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://getcoveredinsurance.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+  - {path: /robots.txt, status: 200, content_type: text/plain, note: 'User-Agent: * / Disallow: / — the insurance site disallows all crawling'}
+- host: https://api.getcoveredinsurance.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://renters.getcoveredinsurance.com
+  spa_catch_all: true
+  documents:
+  - {path: /.well-known/security.txt, status: 200, content_type: text/html, accepted: false,
+     note: SPA catch-all returns the same 17,910-byte HTML shell for every path — rejected}
+  - {path: /.well-known/agent-card.json, status: 200, content_type: text/html, accepted: false,
+     note: SPA catch-all HTML shell — not an AgentCard; rejected per A2A probe rules}
+  - {path: /.well-known/agent.json, status: 200, content_type: text/html, accepted: false,
+     note: SPA catch-all HTML shell — rejected}
+  - {path: /llms.txt, status: 200, content_type: text/html, accepted: false,
+     note: SPA catch-all HTML shell — not an llms.txt; rejected}
+results:
+  security_txt: false
+  openid_configuration: false
+  oauth_authorization_server: false
+  api_catalog: false
+  ai_plugin: false
+  agent_card: false
+x-evidence:
+  fetched: '2026-08-04'
+  tool: curl (User-Agent Mozilla/5.0), follow-redirects

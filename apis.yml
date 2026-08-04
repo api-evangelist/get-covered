@@ -1,23 +1,118 @@
 aid: get-covered
 name: Get Covered
-description: 'Get Covered is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'GetCovered, Inc. (Get Covered) is a New York-headquartered insurtech
+  and property-risk technology company, founded in 2017, that consolidates fragmented
+  insurance and compliance workflows for multifamily property management portfolios
+  into a single platform. Its six verticals are renters insurance (HO4, master policy
+  and TLL programs), security deposits (cash, surety and alternative deposits), animal
+  and ESA screening, vendor certificate-of-insurance compliance, Spend IQ procurement
+  and invoice validation, and review monitoring — layered with an AI tier branded GetHub
+  (portfolio data and claims) and Cora (a conversational resident agent). The company
+  reports 3M+ units live across 42 licensed states (NAIC #18224), with insurance services
+  offered through GetCovered Insurance Services, LLC. Its platform API syncs resident,
+  policy, vendor and invoice data two-way at the lease level with property management
+  systems including Yardi, Entrata, RealPage OneSite, AppFolio, MRI and ResMan. The
+  API itself is a partner/integration surface: the API reference at api.getcoveredinsurance.com/api-docs
+  is behind HTTP Basic authentication and no OpenAPI, llms.txt or /.well-known documents
+  are published publicly.'
 url: https://raw.githubusercontent.com/api-evangelist/get-covered/refs/heads/main/apis.yml
+image: https://www.getcovered.io/logo.svg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
-apis: []
+- Insurance
+- InsurTech
+- Renters Insurance
+- Property Management
+- Real Estate
+- Compliance
+- Risk Management
+- Embedded Insurance
+- Artificial Intelligence
+apis:
+- name: Get Covered Platform API
+  description: 'The Get Covered platform API — the integration surface that syncs resident,
+    lease, policy, vendor certificate and invoice data two-way with property management
+    systems (Yardi, Entrata, RealPage OneSite, AppFolio, MRI, ResMan) and powers the
+    resident renters-insurance portal at renters.getcoveredinsurance.com. The host is
+    live and serves an API reference at /api-docs, but that reference is gated behind
+    HTTP Basic authentication (WWW-Authenticate: Basic), so no public machine-readable
+    contract (OpenAPI, Swagger, GraphQL SDL or AsyncAPI) could be harvested. Access is
+    arranged through Get Covered directly.'
+  humanURL: https://www.getcovered.io/
+  baseURL: https://api.getcoveredinsurance.com
+  tags:
+  - Insurance
+  - Property Management
+  - Compliance
+  x-contract-status: gated
+  x-evidence:
+    fetched: '2026-08-04'
+    api_docs_url: https://api.getcoveredinsurance.com/api-docs
+    api_docs_http_status: 401
+    api_docs_www_authenticate: 'Basic realm=""'
+    openapi_probes: '/openapi.json 404, /openapi.yaml 404, /swagger.json 404, /v1/openapi.json
+      404, /api-docs/v1/swagger.json 401, /graphql 404'
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/get-covered-domain-security.yml
 - type: Website
+  url: https://www.getcovered.io/
+- type: Portal
+  url: https://www.getcovered.io/
+- type: Documentation
+  url: https://www.getcovered.io/ai
+- type: About
+  url: https://www.getcovered.io/about
+- type: Blog
+  url: https://www.getcovered.io/blog
+- type: Careers
+  url: https://www.getcovered.io/careers
+- type: Customers
+  url: https://www.getcovered.io/customers
+- type: SignIn
+  url: https://renters.getcoveredinsurance.com/auth/login
+- type: Support
+  url: https://www.getcovered.io/book-a-demo
+- type: TermsOfService
+  url: https://www.getcovered.io/terms
+- type: PrivacyPolicy
+  url: https://www.getcovered.io/privacy
+- type: License
+  url: https://www.getcoveredinsurance.com/licenses
+- type: Security
+  url: https://www.getcovered.io/security
+- type: VulnerabilityDisclosure
+  url: security/get-covered-vulnerability-disclosure.yml
+- type: Compliance
+  url: https://www.getcovered.io/ai-disclosure
+- type: AIDisclosure
+  url: https://www.getcovered.io/ai-disclosure
+- type: Profile
   url: https://forgeglobal.com/get-covered_stock/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/get-covered-inc
+- type: Packages
+  url: packages/get-covered-packages.yml
+- type: LLMsTxt
+  url: llms/get-covered-llms.txt
+- type: Conformance
+  url: conformance/get-covered-conformance.yml
+- type: Lifecycle
+  url: lifecycle/get-covered-lifecycle.yml
+- type: Integrations
+  url: integrations/_index.yml
+x-enrichment:
+  date: '2026-08-04'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1

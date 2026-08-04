@@ -1,0 +1,47 @@
+generated: '2026-08-04'
+method: searched
+source: npm registry search, PyPI, RubyGems
+summary: >-
+  Get Covered publishes no first-party API client library in any public registry. No
+  package named getcovered/get-covered exists on PyPI or RubyGems, and there is no
+  public GitHub organization (api.github.com/orgs/getcovered and /users/getcovered both
+  return 404). Two npm packages carry the GetCovered name and appear to originate with
+  the company (Angular UI component libraries published by the npm account
+  "vikasgetcovered"), but neither is an API SDK and neither could be confirmed
+  first-party — the GitHub repositories they reference are not publicly reachable. No
+  `SDKs` pointer is emitted, because no official API client library was found.
+packages:
+- language: javascript
+  registry: npm
+  name: getcovered-ui-kit
+  url: https://www.npmjs.com/package/getcovered-ui-kit
+  install: npm install getcovered-ui-kit
+  version: 1.0.4
+  license: MIT
+  published: '2025-09-17'
+  repository: https://github.com/getcovered/ui-kit
+  description: GetCovered UI Kit — Angular component library with buttons and color palettes.
+  official: false
+  kind: ui-components
+  x-note: >-
+    Attributed to Get Covered by name and by npm maintainer handle "vikasgetcovered",
+    but the referenced GitHub org github.com/getcovered is not publicly reachable
+    (404), so first-party status is unconfirmed. Not an API client library.
+- language: javascript
+  registry: npm
+  name: '@vikasgetcovered/ui-kit'
+  url: https://www.npmjs.com/package/@vikasgetcovered/ui-kit
+  install: npm install @vikasgetcovered/ui-kit
+  repository: https://github.com/getcovered/ui-library
+  description: GetCovered Design System UI Library — color palette and components.
+  official: false
+  kind: ui-components
+  x-note: Scoped under a personal npm namespace; unconfirmed first-party. Not an API client library.
+registries_probed:
+- {registry: npm, query: getcovered, result: 2 name-matching packages}
+- {registry: pypi, names: [getcovered, get-covered, getcovered-api], result: 404}
+- {registry: rubygems, names: [getcovered, get_covered], result: 404}
+- {registry: github, orgs: [getcovered, get-covered, getcoveredio], result: 404}
+x-evidence:
+  fetched: '2026-08-04'
+  npm_search: https://registry.npmjs.org/-/v1/search?text=getcovered
