@@ -16,6 +16,17 @@ description: 'GetCovered, Inc. (Get Covered) is a New York-headquartered insurte
   is behind HTTP Basic authentication and no OpenAPI, llms.txt or /.well-known documents
   are published publicly.'
 url: https://raw.githubusercontent.com/api-evangelist/get-covered/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.getcovered.io/logo.svg
 x-type: company
 x-source: harvest:secondary-market
