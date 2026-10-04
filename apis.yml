@@ -52,7 +52,7 @@ tags:
 - Insurtech
 - Renters Insurance
 - Property Management
-- Real-Estate
+- Real Estate
 - Compliance
 - Risk Management
 - Embedded Insurance
@@ -68,6 +68,7 @@ tags_raw:
 - Risk Management
 - Embedded Insurance
 - Artificial Intelligence
+- Real-Estate
 apis:
 - name: Get Covered Platform API
   description: 'The Get Covered platform API — the integration surface that syncs resident,
