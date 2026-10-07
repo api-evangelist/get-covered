@@ -99,6 +99,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Pricing
+  url: https://www.getcovered.io/
+- type: Plans
+  url: plans/get-covered-plans-pricing.yml
 - type: DomainSecurity
   url: security/get-covered-domain-security.yml
 - type: Website
