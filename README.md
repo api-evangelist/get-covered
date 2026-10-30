@@ -64,5 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Get Covered is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/get-covered_stock/
+GetCovered, Inc. (Get Covered) is a New York-headquartered insurtech and property-risk technology company, founded in 2017, that consolidates fragmented insurance and compliance workflows for multifamily property management portfolios into a single platform. Its six verticals are renters insurance (HO4, master policy and TLL programs), security deposits (cash, surety and alternative deposits), animal and ESA screening, vendor certificate-of-insurance compliance, Spend IQ procurement and invoice validation, and review monitoring — layered with an AI tier branded GetHub (portfolio data and claims) and Cora (a conversational resident agent). The company reports 3M+ units live across 42 licensed states (NAIC #18224), with insurance services offered through GetCovered Insurance Services, LLC. Its platform API syncs resident, policy, vendor and invoice data two-way at the lease level with property management systems including Yardi, Entrata, RealPage OneSite, AppFolio, MRI and ResMan. The API itself is a partner/integration surface: the API reference at api.getcoveredinsurance.com/api-docs is behind HTTP Basic authentication and no OpenAPI, llms.txt or /.well-known documents are published publicly.
+
+**Areas:** Company · Insurance · Insurtech · Renters Insurance · Property Management · Real Estate · Compliance · Risk Management · Embedded Insurance · Artificial Intelligence
+
+## Get Covered on APIs.io
+
+Everything profiled for Get Covered is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/get-covered/](https://apis.io/providers/get-covered/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Get Covered Platform API](https://apis.io/apis/get-covered/get-covered-platform-api/) — The Get Covered platform API — the integration surface that syncs resident, lease, policy, vendor certificate and invoice data two-way with property…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Get Covered Authentication](https://apis.io/security/get-covered/get-covered-authentication/)
+- [Get Covered Domain Security](https://apis.io/security/get-covered/get-covered-domain-security/)
+- [Get Covered Vulnerability Disclosure](https://apis.io/security/get-covered/get-covered-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Get Covered Plans Pricing](https://apis.io/plans/get-covered/get-covered-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.getcovered.io/)
+- [Documentation](https://www.getcovered.io/ai)
+- [Pricing](https://www.getcovered.io/)
+- [Support](https://www.getcovered.io/book-a-demo)
+- [Blog](https://www.getcovered.io/blog)
+- [Security](https://www.getcovered.io/security)
+- [Compliance](https://www.getcovered.io/ai-disclosure)
+- [Terms of service](https://www.getcovered.io/terms)
+- [Privacy policy](https://www.getcovered.io/privacy)
+
+## API Evangelist rating
+
+**Kin Score 24.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 39.5 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.6** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/get-covered/](https://apis.io/providers/get-covered/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Get Covered: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/get-covered/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
